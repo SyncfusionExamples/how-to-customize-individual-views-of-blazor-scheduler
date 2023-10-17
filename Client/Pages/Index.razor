@@ -1,0 +1,43 @@
+﻿@page "/"
+
+<SfSchedule TValue="AppointmentDataModel" @bind-SelectedDate="@CurrentDate"
+            FirstMonthOfYear="4" @bind-CurrentView="@CurrentView">
+    <ScheduleEventSettings TValue="AppointmentDataModel">
+        <ScheduleViews>
+            <ScheduleView Option="View.Day" Interval="3" DisplayName="3 Days"></ScheduleView>
+            <ScheduleView Option="View.Week" Interval="2" DisplayName="2 Weeks"></ScheduleView>
+            <ScheduleView Option="View.WorkWeek"></ScheduleView>
+            <ScheduleView Option="View.Month"></ScheduleView>
+            <ScheduleView Option="View.Year" IsSelected="true"></ScheduleView>
+            <ScheduleView Option="View.TimelineDay"></ScheduleView>
+            <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+            <ScheduleView Option="View.TimelineWorkWeek"></ScheduleView>
+            <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+            <ScheduleView Option="View.TimelineYear" Orientation="Orientation.Vertical"></ScheduleView>
+            <ScheduleView Option="View.Agenda"></ScheduleView>
+            <ScheduleView Option="View.MonthAgenda"></ScheduleView>
+        </ScheduleViews>
+        <SfDataManager Url="https://js.syncfusion.com/demos/ejservices/api/Schedule/LoadData"
+                       Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor">
+        </SfDataManager>
+    </ScheduleEventSettings>
+
+</SfSchedule>
+
+@code {
+    View CurrentView = View.Month;
+
+    DateTime CurrentDate = new DateTime(2017, 6, 5);
+
+    public class AppointmentDataModel
+    {
+        public int Id { get; set; }
+
+        public string Subject { get; set; }
+
+        public DateTime StartTime { get; set; }
+
+        public DateTime EndTime { get; set; }
+
+    }
+}
