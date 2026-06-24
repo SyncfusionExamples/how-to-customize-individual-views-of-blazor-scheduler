@@ -1,6 +1,6 @@
 # How to Customize Individual Views of Blazor Scheduler
 
-**Repository Description**: This sample project demonstrates comprehensive techniques for customizing individual views in the Syncfusion Blazor Scheduler component, allowing developers to tailor the scheduler interface to meet specific application requirements and enhance user experience.
+**Repository Description**: This sample project demonstrates comprehensive techniques for customizing individual views in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component, allowing developers to tailor the scheduler interface to meet specific application requirements and enhance user experience.
 
 ## Overview
 
