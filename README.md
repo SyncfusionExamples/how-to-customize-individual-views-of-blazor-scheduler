@@ -1,10 +1,6 @@
 # How to Customize Individual Views of Blazor Scheduler
 
-**Repository Description**: This sample project demonstrates comprehensive techniques for customizing individual views in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component, allowing developers to tailor the scheduler interface to meet specific application requirements and enhance user experience.
-
-## Overview
-
-This sample explains how to customize the individual views of Syncfusion Blazor Scheduler. The Blazor Scheduler supports multiple view types including Day, Week, Work Week, Month, and Agenda views. Each view can be customized independently to display different configurations, styles, and behaviors based on your application needs.
+This sample project demonstrates techniques for customizing individual views in the [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler) component, enabling developers to tailor the interface to meet specific application requirements and enhance user experience. It covers how to customize different view types such as Day, Week, Work Week, Month, and Agenda views, allowing each view to display distinct configurations, styles, and behaviors based on application needs.
 
 ## Features
 
@@ -19,8 +15,6 @@ This sample explains how to customize the individual views of Syncfusion Blazor 
 
 * Visual Studio 2022
 * .NET 6.0 or later
-* Syncfusion Blazor NuGet packages
-* Basic knowledge of Blazor and C#
 
 ## How to run the project
 
