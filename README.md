@@ -18,10 +18,10 @@ This sample project demonstrates techniques for customizing individual views in 
 
 ## How to run the project
 
-* Checkout this project to a location in your disk
-* Open the solution file using Visual Studio 2022
-* Restore the NuGet packages by rebuilding the solution
-* Run the project and navigate to the Scheduler component page
+1. Checkout this project to your local machine
+2. Open the solution file using Visual Studio 2022
+3. Build the solution to restore the required NuGet packages
+4. Press `F5` to start the application and navigate to the Scheduler component page
 
 ## Documentation
 
