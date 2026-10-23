@@ -1,4 +1,5 @@
 @page "/"
+@inject HttpClient Http
 
 <SfSchedule TValue="AppointmentDataModel" @bind-SelectedDate="@CurrentDate"
             FirstMonthOfYear="4" @bind-CurrentView="@CurrentView">
@@ -41,17 +42,10 @@
         public string? RecurrenceRule { get; set; }
     }
 
-    List<AppointmentDataModel> ScheduleData = new List<AppointmentDataModel>
+    List<AppointmentDataModel>? ScheduleData;
+
+    protected override async Task OnInitializedAsync()
     {
-        new AppointmentDataModel { Id = 1, Subject = "Budget Review", StartTime = new DateTime(2017, 6, 1, 9, 0, 0), EndTime = new DateTime(2017, 6, 1, 10, 30, 0) },
-        new AppointmentDataModel { Id = 2, Subject = "Design Review", StartTime = new DateTime(2017, 6, 2, 11, 0, 0), EndTime = new DateTime(2017, 6, 2, 12, 30, 0) },
-        new AppointmentDataModel { Id = 3, Subject = "Stand-up Meeting", StartTime = new DateTime(2017, 6, 5, 9, 30, 0), EndTime = new DateTime(2017, 6, 5, 10, 0, 0), RecurrenceRule = "FREQ=DAILY;INTERVAL=1;COUNT=5" },
-        new AppointmentDataModel { Id = 4, Subject = "Sprint Planning", StartTime = new DateTime(2017, 6, 6, 14, 0, 0), EndTime = new DateTime(2017, 6, 6, 16, 0, 0) },
-        new AppointmentDataModel { Id = 5, Subject = "Client Call", StartTime = new DateTime(2017, 6, 7, 10, 30, 0), EndTime = new DateTime(2017, 6, 7, 11, 30, 0) },
-        new AppointmentDataModel { Id = 6, Subject = "Team Outing", StartTime = new DateTime(2017, 6, 8, 0, 0, 0), EndTime = new DateTime(2017, 6, 9, 0, 0, 0), IsAllDay = true },
-        new AppointmentDataModel { Id = 7, Subject = "Regression Testing", StartTime = new DateTime(2017, 6, 12, 13, 0, 0), EndTime = new DateTime(2017, 6, 12, 17, 0, 0) },
-        new AppointmentDataModel { Id = 8, Subject = "Release Meeting", StartTime = new DateTime(2017, 6, 14, 15, 30, 0), EndTime = new DateTime(2017, 6, 14, 16, 30, 0) },
-        new AppointmentDataModel { Id = 9, Subject = "Product Demo", StartTime = new DateTime(2017, 6, 15, 11, 0, 0), EndTime = new DateTime(2017, 6, 15, 12, 0, 0) },
-        new AppointmentDataModel { Id = 10, Subject = "Retrospective", StartTime = new DateTime(2017, 6, 16, 16, 0, 0), EndTime = new DateTime(2017, 6, 16, 17, 0, 0) },
-    };
+        ScheduleData = await Http.GetFromJsonAsync<List<AppointmentDataModel>>("sample-data/appointments.json");
+    }
 }
