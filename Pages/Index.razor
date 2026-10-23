@@ -1,8 +1,9 @@
-﻿@page "/"
+@page "/"
+@inject HttpClient Http
 
 <SfSchedule TValue="AppointmentDataModel" @bind-SelectedDate="@CurrentDate"
             FirstMonthOfYear="4" @bind-CurrentView="@CurrentView">
-    <ScheduleEventSettings TValue="AppointmentDataModel">
+    <ScheduleEventSettings TValue="AppointmentDataModel" DataSource="@ScheduleData">
         <ScheduleViews>
             <ScheduleView Option="View.Day" Interval="3" DisplayName="3 Days"></ScheduleView>
             <ScheduleView Option="View.Week" Interval="2" DisplayName="2 Weeks"></ScheduleView>
@@ -17,9 +18,6 @@
             <ScheduleView Option="View.Agenda"></ScheduleView>
             <ScheduleView Option="View.MonthAgenda"></ScheduleView>
         </ScheduleViews>
-        <SfDataManager Url="https://js.syncfusion.com/demos/ejservices/api/Schedule/LoadData"
-                       Adaptor="@Syncfusion.Blazor.Adaptors.WebApiAdaptor">
-        </SfDataManager>
     </ScheduleEventSettings>
 
 </SfSchedule>
@@ -33,11 +31,21 @@
     {
         public int Id { get; set; }
 
-        public string Subject { get; set; }
+        public string? Subject { get; set; }
 
         public DateTime StartTime { get; set; }
 
         public DateTime EndTime { get; set; }
 
+        public bool IsAllDay { get; set; }
+
+        public string? RecurrenceRule { get; set; }
+    }
+
+    List<AppointmentDataModel>? ScheduleData;
+
+    protected override async Task OnInitializedAsync()
+    {
+        ScheduleData = await Http.GetFromJsonAsync<List<AppointmentDataModel>>("sample-data/appointments.json");
     }
 }
