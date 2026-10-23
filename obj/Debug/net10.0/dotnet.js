@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "CustomIndividualViews",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-6tc1iwcoF8RIchSZ4wvuLCjUud7Y3oQFWUD4wO3B26Q=",
+    "hash": "sha256-NkvUfsH90p46z4x2vK3tUuYmS2cuAE6OJ8VmXJOBmZc=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.b6l13xorvf.js"
@@ -1344,16 +1344,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "CustomIndividualViews.wasm",
-        "name": "CustomIndividualViews.xb9tqg9ond.wasm",
-        "hash": "sha256-ff6R9ya9nQFoY59yTFzCVXrkIgJrUObxVGmmZRWP6b4=",
+        "name": "CustomIndividualViews.uiq7wokwuz.wasm",
+        "hash": "sha256-BkKoK2gac+sRYQMLPmqZ67ca+mwaH9SNn/XDEbfuxzs=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "CustomIndividualViews.pdb",
-        "name": "CustomIndividualViews.14aibj5owv.pdb",
-        "hash": "sha256-T5UBE2MhXGqU4JWFkEwcZXZt3Fu7sDS/vmSQ+t1m3iI=",
+        "name": "CustomIndividualViews.x3415tiod2.pdb",
+        "hash": "sha256-81vQGpVXZNLYlZ7NTJ8Qw1wH7jW7/vPOQSICvW8Uf4Q=",
         "cache": "force-cache"
       }
     ],
