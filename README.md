@@ -13,14 +13,14 @@ This sample project demonstrates techniques for customizing individual views in 
 
 ## Prerequisites
 
-* Visual Studio 2022
-* .NET 6.0 or later
+* Visual Studio 2022 or Visual Studio Code (with the C# Dev Kit extension)
+* .NET 10.0 SDK or later
 
 ## How to run the project
 
 1. Checkout this project to your local machine
-2. Open the solution file using Visual Studio 2022
-3. Build the solution to restore the required NuGet packages
+2. Open the project folder in Visual Studio 2022 / Visual Studio Code
+3. Build the project to restore the required NuGet packages
 4. Press `F5` to start the application and navigate to the Scheduler component page
 
 ## Documentation
