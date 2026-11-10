@@ -1,0 +1,73 @@
+[
+  {
+    "Id": 1,
+    "Subject": "Budget Review",
+    "StartTime": "2017-06-01T09:00:00",
+    "EndTime": "2017-06-01T10:30:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 2,
+    "Subject": "Design Review",
+    "StartTime": "2017-06-02T10:00:00",
+    "EndTime": "2017-06-02T11:30:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 3,
+    "Subject": "Stand-up Meeting",
+    "StartTime": "2017-06-05T09:30:00",
+    "EndTime": "2017-06-05T10:00:00",
+    "IsAllDay": false,
+    "RecurrenceRule": "FREQ=DAILY;INTERVAL=1;COUNT=5"
+  },
+  {
+    "Id": 4,
+    "Subject": "Client Call",
+    "StartTime": "2017-06-06T11:00:00",
+    "EndTime": "2017-06-06T12:00:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 5,
+    "Subject": "Sprint Planning",
+    "StartTime": "2017-06-08T14:00:00",
+    "EndTime": "2017-06-08T16:00:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 6,
+    "Subject": "Team Outing",
+    "StartTime": "2017-06-10T00:00:00",
+    "EndTime": "2017-06-11T00:00:00",
+    "IsAllDay": true
+  },
+  {
+    "Id": 7,
+    "Subject": "Performance Review",
+    "StartTime": "2017-06-15T13:00:00",
+    "EndTime": "2017-06-15T14:30:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 8,
+    "Subject": "Project Kickoff",
+    "StartTime": "2017-06-19T10:00:00",
+    "EndTime": "2017-06-19T11:30:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 9,
+    "Subject": "Training Session",
+    "StartTime": "2017-06-23T15:30:00",
+    "EndTime": "2017-06-23T17:00:00",
+    "IsAllDay": false
+  },
+  {
+    "Id": 10,
+    "Subject": "Quarterly Meeting",
+    "StartTime": "2017-06-28T09:00:00",
+    "EndTime": "2017-06-28T11:00:00",
+    "IsAllDay": false
+  }
+]
